@@ -1,5 +1,5 @@
 var appData = {
-    postUrl: "http://tp.hscxsh.cn/which",
+    postUrl: "", //后台地址
     tietukuToken: "", // 贴图库的token
     user: {
         phone: null,
