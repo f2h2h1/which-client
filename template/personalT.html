@@ -1,0 +1,70 @@
+<ion-view view-title="which" cache-view="false">
+    <link href="static/css/tpl/personal.css" rel="stylesheet">
+    <div class="cc-personal" ng-controller="personalController">
+        <div class="bar bar-header">
+            <div class="tabs">
+
+                <a class="tab-item" href="javascript:history.back(-1)">
+                    <i class="icon icon-arror" style="float: left;margin-left: 25px;"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h4>
+                        我的
+                    </h4>
+                </a>
+                <a class="tab-item" ui-sref="setI">
+                    <i class="icon icon-setting" style="float: right;margin-right: 25px;"></i>
+                </a>
+            </div>
+
+        </div>
+        <ion-content style="padding-top:64px;">
+            <!--<ion-refresher pulling-text="下拉刷新..." on-refresh=""></ion-refresher>-->
+            <div class="logo"><img class="logo-image" src="{{userLogo}}" /></div>
+            <div class="layer">
+                <p class="cc-personal-layer">{{userNickName}}</p>
+            </div>
+            <div class="tabs cc-personal-tabs" style="background-color: #2D2D2D;">
+                <a class="tab-item a-checked" id="myquestions" ng-click="switchCheck(0)">我的问题</a>|
+                <a class="tab-item" id="mychecked" ng-click="switchCheck(1)">我的选择</a>
+            </div>
+
+            <div class="cc-personal-grid" ng-show="myquestions">
+                <div class="card" ng-repeat="item in myQuestions">
+                    <div class="item item-text-wrap">
+                        <div class="row question-title" ng-click="gotoQuestins(item.publishid, item.type)">
+                            <p>{{item.tittle}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col col-80">
+                                <span>{{item.createtime}}</span>&nbsp;
+                                <span class="cc-personal-del">删除</span>
+                            </div>
+                            <div class="col col-20">
+                                <span>{{item.likes}}人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cc-personal-grid" ng-show="mychecked">
+                <div class="card" ng-repeat="item in myChoose">
+                    <div class="item item-text-wrap">
+                        <div class="row question-title" ng-click="gotoQuestins(item.publishid, item.type)">
+                            <p>{{item.tittle}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col col-80">
+                                <span>{{item.createtime}}</span>&nbsp;
+                                <!--<span class="cc-personal-del">删除</span>-->
+                            </div>
+                            <div class="col col-20">
+                                <span>{{item.likes}}人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </div>
+</ion-view>

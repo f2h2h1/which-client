@@ -1,0 +1,47 @@
+<ion-view view-title="which">
+
+    <link href="static/css/tpl/index.css" rel="stylesheet">
+    <div class="cc-index" ng-controller="indexController">
+        <div class="bar bar-header">
+            <div class="tabs">
+                <a class="tab-item" ui-sref="messageI">
+                    <i class="icon icon-message" style="float: left;margin-left: 25px;"></i>
+                </a>
+
+                <a class="tab-item" href="#">
+                    <img class="cc-title-image" src="http://i1.piimg.com/501024/dbfb4cfc6f6b40a4.png">
+                </a>
+
+                <a class="tab-item" ui-sref="searchI">
+                    <i class="icon icon-search" style="float: right;margin-right: 25px;font-size: 28px;"></i>
+                </a>
+            </div>
+
+        </div>
+        <ion-nav-view name="indexMainV"></ion-nav-view>
+
+        <ion-footer-bar class="bar bar-footer">
+            <div class="tabs">
+                <a class="tab-item" ui-sref="indexI.indexMainI">
+                    <i class="icon icon-home" style="font-size: 37px;"></i>
+                </a>
+                <a class="tab-item" ui-sref="indexI.indexClassI">
+                    <i class="icon icon-classify"></i>
+                </a>
+                <a class="tab-item" ui-sref="askingquestionsI">
+                    <img src="http://i4.buimg.com/501024/abc8b7f4c98eb17e.png" style="width: 45px;">
+                    <!--<i class="icon ion-plus-circled" style="margin-top:0px;color:#FBD651;"></i>-->
+                </a>
+                <!--<a class="tab-item" ui-sref="template2I">
+                    <i class="icon icon-game"></i>
+                </a>-->
+                <a class="tab-item" href="../yao/template.html">
+                    <i class="icon icon-game"></i>
+                </a>
+                <a class="tab-item" ui-sref="personalI">
+                    <i class="icon icon-account"></i>
+                </a>
+            </div>
+        </ion-footer-bar>
+    </div>
+</ion-view>

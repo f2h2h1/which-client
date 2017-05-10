@@ -1,0 +1,142 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/questionsdetail.css" rel="stylesheet">
+    <div class="cc-questionsdetail" ng-controller="questionsdetailController" style="background: url({{backgroundImage}}) no-repeat center bottom;background-size: 100% 100%;">
+        <div class="bar bar-header " id="questionsdetailheader">
+            <div class="tabs">
+                <a class="tab-item" ng-click="goBack()">
+                    <i class="icon icon-arror cc-questions-button" style="float: left;margin-left: 25px;margin-top:15px;font-size:20px;"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h1>{{type}}</h1>
+                </a>
+                <a class="tab-item" ui-sref="askingquestionsI">
+                    <i class="icon ion-ios-plus-empty cc-questions-button" style="float: right;margin-right: 25px;font-size: 40px;"></i>
+                </a>
+            </div>
+        </div>
+        <ion-content scroll="true" on-scroll="getScrollPositions()">
+            <div class="card">
+                <div class="row">
+                    <div class="col">
+                        <div class="row"><img src="{{quesdetail.logo}}"></div>
+                    </div>
+                </div>
+                <div class="row question-title"><span>{{quesdetail.tittle}}</span></div>
+                <div class="row question-content"><span>{{quesdetail.content}}</span></div>
+                <div class="row question-comment">评论</div>
+                <div class="row question-comment-detail">
+                    <ul class="list">
+                        <li class="item" ng-repeat="item in comment">
+                            <span ng-click="replyreply(item.commentid, item.comments[0].fromid, item.comments[0].fromuser)" ng-hide="item.comments[0].fromid!=quesdetail.authorid?false:true">{{item.comments[0].fromuser}}&nbsp;:&nbsp;&nbsp;{{item.comments[0].content}}</span>
+                            <span class="asker" ng-click="replyreply(item.commentid, item.comments[0].fromid, item.comments[0].fromuser)" ng-hide="item.comments[0].fromid==quesdetail.authorid?false:true">{{item.comments[0].fromuser}}&nbsp;:&nbsp;&nbsp;{{item.comments[0].content}}</span>
+                            <div class="reply" ng-hide="item.comments.length>1?false:true">
+                                <ul class="list">
+                                    <li class="item reply-item" ng-click="replyreply(item.commentid, items.fromid, items.fromuser)" ng-repeat="items in item.comments" ng-hide="items.type=='rely'?false:true">
+                                        {{items.fromuser}}&nbsp;<span ng-hide="item.comments[0].fromid!=items.toid?false:true">@&nbsp;{{items.touser}}</span>:&nbsp;&nbsp;{{items.content}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--<ul class="list">
+                        <li class="item" ng-repeat="item in comments">
+                            <span ng-hide="item.fromid!=quesdetail.publishid?false:true">{{item.fromuser}}&nbsp;:&nbsp;&nbsp;{{item.content}}<span>
+                            <span class="asker" ng-hide="item.fromid==quesdetail.publishid?false:true">{{item.fromuser}}&nbsp;:&nbsp;&nbsp;{{item.content}}<span>
+                            </li>
+                        </ul>-->
+                    <!--<ul class="list">
+                        <li class="item" ng-repeat="item in comments">
+                            <span ng-hide="item.comments[0].fromid!=quesdetail.publishid?false:true">{{item.comments[0].fromuser}}&nbsp;:&nbsp;&nbsp;{{item.comments[0].content}}<span>
+                            <span class="asker" ng-hide="item.comments[0].fromid==quesdetail.publishid?false:true">{{item.comments[0].fromuser}}&nbsp;:&nbsp;&nbsp;{{item.comments[0].content}}<span>
+                                <div class="reply" ng-hide="item.comments.length<1?false:true">
+                                    <ul class="list">
+                                        <li class="item reply-item">
+                                        啦啦啦&nbsp;:&nbsp;&nbsp;更喜欢日本多一些，文化棒
+                                        </li>
+                                        <li class="item reply-item">
+                                        李大戳&nbsp;@&nbsp;啦啦啦&nbsp;:&nbsp;&nbsp;韩国不错啊吃的巨好！
+                                        </li>
+                                        <div style="clear: both;"></div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>-->
+                    <!--<ul class="list">
+                        <li class="item">
+                            <span class="asker">楼主</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">相比之下哪个国家住的好一些<span>
+                                    <div class="reply">
+                                        <ul class="list">
+                                            <li class="item reply-item">
+                                            啦啦啦&nbsp;:&nbsp;&nbsp;更喜欢日本多一些，文化棒
+                                            </li>
+                                            <li class="item reply-item">
+                                            李大戳&nbsp;@&nbsp;啦啦啦&nbsp;:&nbsp;&nbsp;韩国不错啊吃的巨好！
+                                            </li>
+                                            <div style="clear: both;"></div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <span>啦啦啦</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">更喜欢日本多一些，文化棒<span>
+                                </li>
+                                <li class="item">
+                                    <span>李大戳</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">韩国不错啊吃的巨好！<span>
+                                </li>
+                                <li class="item">
+                                    <span>李大戳</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">都好都好哈哈哈哈哈哈哈<span>
+                                </li>
+                                <li class="item asker">
+                                    <span>楼主</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">相比之下哪个国家住的好一些<span>
+                                </li>
+                                <li class="item">
+                                    <span>啦啦啦</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">更喜欢日本多一些，文化棒</span>
+                        </li>
+                        <li class="item">
+                            <span>李大戳</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">韩国不错啊吃的巨好！<span>
+                                </li>
+                                <li class="item">
+                                    <span>李大戳</span>&nbsp;:&nbsp;&nbsp;<span class="questiom-comment-content">都好都好哈哈哈哈哈哈哈<span>
+                                </li>
+                            </ul>-->
+                </div>
+            </div>
+        </ion-content>
+        <div class="bar bar-footer bar-dark">
+            <!--<div class="row" ng-show="share">
+                <div class="col col-33">
+                    <i class="icon ion-ios-heart-outline" ng-show="outlinelike" ng-click="like()"></i>
+                    <i class="icon ion-ios-heart" ng-show="inlinelike" ng-click="like()"></i>
+                </div>
+                <div class="col col-33"><i class="icon ion-chatbox-working" ng-click="onreply()"></i></div>
+                <div class="col col-33"><i class="icon ion-android-share-alt"></i></div>
+            </div>-->
+            <div class="row" ng-show="share">
+                <div class="col col-50">
+                    <i class="icon ion-ios-heart-outline" ng-show="outlinelike" ng-click="like()"></i>
+                    <i class="icon ion-ios-heart" ng-show="inlinelike" ng-click="like()"></i>
+                </div>
+                <div class="col col-50"><i class="icon ion-chatbox-working" ng-click="onreply()"></i></div>
+            </div>
+            <div class="row" ng-show="ngreply">
+                <div class="col col-80">
+                    <label class="item item-input">
+                                <input type="search" placeholder="评论" ng-model="replytext" id="questiondetailreplyid">
+                            </label>
+                </div>
+                <div class="col col-20">
+                    <button class="button" ng-click="sendreply()">{{sendbuttontext}}</button>
+                </div>
+            </div>
+            <div class="row" ng-show="ngreplyreply">
+                <div class="col col-80">
+                    <label class="item item-input">
+                        <input type="search" placeholder="" ng-model="replyreplytext" id="questiondetailreplyreplyid">
+                    </label>
+                </div>
+                <div class="col col-20">
+                    <button class="button" ng-click="sendreplyreply()">{{sendreplybuttontext}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-view>

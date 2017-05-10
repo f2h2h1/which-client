@@ -1,0 +1,121 @@
+        @font-face {
+            font-family: 'glyphicons-halflings-regular';
+            src: url('./resoures/fonts/glyphicons-halflings-regular.svg'), url('./resoures/fonts/glyphicons-halflings-regular.woff2');
+            /* IE9 */
+        }
+        
+        @font-face {
+            font-family: 'PingFangMedium';
+            src: url('./resoures/fonts/PingFang-Medium.ttf');
+            /* IE9 */
+        }
+        
+        @font-face {
+            font-family: 'PingFangRegular';
+            src: url('./resoures/fonts/PingFang-Regular.ttf');
+            /* IE9 */
+        }
+        
+        .cc-set {
+            font-family: 'PingFangMedium';
+            background-color: #2D2D2D;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-set i {
+            color: #FCFCFC;
+            width: 26px;
+        }
+        
+        .cc-set .bar,
+        .cc-set .tabs {
+            background-image: linear-gradient(0deg, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0) 0, rgba(0, 0, 0, 0) 0);
+        }
+        
+        .cc-set .bar.bar-header {
+            border: 0px;
+            height: 54px;
+            padding-top: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+            box-shadow: 0px 5px 10px 1px #1B1B1B;
+        }
+        
+        .cc-set .bar div {
+            border: 0px;
+        }
+        
+        .cc-set .bar.bar-header,
+        .cc-set .tabs,
+        .cc-set .bar.bar-header .bar,
+        .cc-set .bar .bar-footer {
+            background-color: #373737;
+        }
+        
+        .cc-set .bar.bar-footer {
+            padding: 0px;
+        }
+        
+        .cc-set .tabs {
+            border: 0px;
+            padding-top: 0px;
+        }
+        
+        .cc-set .tabs .tab-item {
+            opacity: 1;
+        }
+        
+        .cc-set .bar.bar-header .tabs .tab-item i {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        
+        .cc-set #oval {
+            width: 200px;
+            height: 50px;
+            background: #373737;
+            border-top-left-radius: 100px 50px;
+            border-top-right-radius: 100px 50px;
+            border-bottom-right-radius: 0 0;
+            border-bottom-left-radius: 0 0;
+        }
+        
+        .cc-set .ion-arrow-left-c .ion-gear-b {
+            color: #FFF;
+        }
+        
+        .cc-set .bar h4 {
+            margin-top: 15px;
+            color: #fff;
+        }
+        
+        .cc-set .cc-set-content a.item {
+            /*/position: 44;*/
+            color: #909090;
+            background-color: #2d2d2d;
+        }
+        
+        .cc-set .item {
+            color: #717171;
+            border-color: #444040;
+            margin: -2px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+        
+        .cc-set ion-content .list i {
+            right: 24px;
+            width: 20px;
+            transform: rotate(180deg);
+            font-size: 20px;
+        }
+        
+        .cc-set .cc-set-exit {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cc-set a.item.cc-set-exit {
+            color: #FFC902;
+        }

@@ -1,0 +1,64 @@
+<ion-view view-title="which">
+    <ion-content style="padding-top:64px;">
+        <!--<ion-refresher pulling-text="下拉刷新..." on-refresh=""></ion-refresher>-->
+
+
+        <div class="list card" ng-repeat="item in indexContent2">
+            <img class="full-image" src="{{item.image}}" ng-click="gotoQuestins(item.index, item.type, item.publishid)">
+            <div class="item item-body">
+                <span class="cc-question-title">{{item.tittle}}</span>
+                <p>
+                    <span class="cc-questioner">{{item.nickname}}</span>
+                    <a href="#" class="subdued"><i class="icon ion-ios-heart"></i>&nbsp;{{item.likes}}</a>&nbsp;&nbsp;
+                    <a href="#" class="subdued"><i class="icon ion-chatbox-working"></i>&nbsp;{{item.comments}}</a>
+                </p>
+            </div>
+        </div>
+
+        <!--<div class="list card">
+            <img class="full-image" src="http://i4.buimg.com/501024/9224a27e1604a555.png" ui-sref="questionsI">
+            <div class="item item-body">
+                <span class="cc-question-title">这次假期去韩国还是去日本比较好</span>
+                <p>
+                    <span class="cc-questioner">啦啦啦</span>
+                    <a href="#" class="subdued"><i class="icon ion-ios-heart"></i>&nbsp;{{ 5 + 5 }}</a>&nbsp;&nbsp;
+                    <a href="#" class="subdued"><i class="icon ion-chatbox-working"></i>&nbsp;54</a>
+                </p>
+            </div>
+        </div>
+        <div class="list card">
+            <img class="full-image" src="http://i4.buimg.com/501024/fcfdf420051d501e.png" ui-sref="questionsI">
+            <div class="item item-body">
+                <span class="cc-question-title">去日本好还是去韩国好</span>
+                <p>
+                    <span class="cc-questioner">啦啦啦</span>
+                    <a href="#" class="subdued"><i class="icon ion-ios-heart"></i>&nbsp;54</a>&nbsp;&nbsp;
+                    <a href="#" class="subdued"><i class="icon ion-chatbox-working"></i>&nbsp;54</a>
+                </p>
+            </div>
+        </div>
+        <div class="list card">
+            <img class="full-image" src="http://i4.buimg.com/501024/e956ec6e0d11dd8e.png" ui-sref="questionsI">
+            <div class="item item-body">
+                <span class="cc-question-title">去日本好还是去韩国好</span>
+                <p>
+                    <span class="cc-questioner">啦啦啦</span>
+                    <a href="#" class="subdued"><i class="icon ion-ios-heart"></i>&nbsp;54</a>&nbsp;&nbsp;
+                    <a href="#" class="subdued"><i class="icon ion-chatbox-working"></i>&nbsp;54</a>
+                </p>
+            </div>
+        </div>
+        <div class="list card">
+            <img class="full-image" src="http://i4.buimg.com/501024/e956ec6e0d11dd8e.png" ui-sref="questionsI">
+            <div class="item item-body">
+                <span class="cc-question-title">去日本好还是去韩国好</span>
+                <p>
+                    <span class="cc-questioner">啦啦啦</span>
+                    <a href="#" class="subdued"><i class="icon ion-ios-heart"></i>&nbsp;54</a>&nbsp;&nbsp;
+                    <a href="#" class="subdued"><i class="icon ion-chatbox-working"></i>&nbsp;54</a>
+                </p>
+            </div>
+        </div>-->
+        <br><br><br><br>
+    </ion-content>
+</ion-view>

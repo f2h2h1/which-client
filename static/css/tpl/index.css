@@ -1,0 +1,151 @@
+        .cc-index {
+            background-color: #2D2D2D;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-index ion-content {
+            background-color: #2D2D2D;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-index i {
+            color: #717171;
+            width: 26px;
+        }
+        
+        .cc-index .bar,
+        .cc-index .tabs {
+            background-image: linear-gradient(0deg, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0) 0, rgba(0, 0, 0, 0) 0);
+        }
+        
+        .cc-index .bar.bar-header {
+            border: 0px;
+            height: 64px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            box-shadow: 0px 5px 10px 1px #1B1B1B;
+        }
+        
+        .cc-index .bar div {
+            border: 0px;
+        }
+        
+        .cc-index .bar.bar-header,
+        .cc-index .tabs,
+        .cc-index .bar.bar-header .bar,
+        .cc-index .bar .bar-footer {
+            background-color: #2A2A2A;
+        }
+        
+        .cc-index .bar.bar-footer {
+            padding: 0px;
+            box-shadow: 0px -5px 10px 1px #1B1B1B;
+        }
+        
+        .cc-index .tabs {
+            border: 0px;
+            padding-top: 0px;
+        }
+        
+        .cc-index .bar-header .tabs {
+            margin-bottom: 5px;
+        }
+        
+        .cc-index .tabs .tab-item {
+            opacity: 1;
+        }
+        
+        .cc-index .bar-header .tabs .tab-item {
+            margin-top: 10px;
+        }
+        
+        .cc-index #oval {
+            width: 200px;
+            height: 50px;
+            background: #373737;
+            border-top-left-radius: 100px 50px;
+            border-top-right-radius: 100px 50px;
+            border-bottom-right-radius: 0 0;
+            border-bottom-left-radius: 0 0;
+        }
+        
+        .cc-index .ion-plus-cirled {
+            color: #FBD651;
+        }
+        
+        .cc-index .bar h1 {
+            color: #F5C535;
+        }
+        
+        .cc-index .list.card {
+            border-radius: 12px;
+            padding: 0px;
+            width: 92%;
+            /*height: 32%;*/
+            min-width: 295px;
+            min-height: 191px;
+            max-width: 400px;
+            /*max-height: 235px;*/
+            margin: 0 auto;
+            margin-top: 18px;
+            margin-bottom: 0px;
+            background-color: #2D2D2D;
+        }
+        
+        .cc-index .full-image {
+            /*height: 152px;*/
+            height: 73%;
+            width: 100%;
+            min-width: 295px;
+            min-height: 130px;
+            max-width: 400px;
+            max-height: 170px;
+        }
+        
+        .cc-index .item.item-body {
+            /*width: 343px;*/
+            /*height: 65px;*/
+            padding-left: 5%;
+            padding-top: 2%;
+            border-top-width: 0px;
+            overflow: hidden;
+            margin: -6px;
+        }
+        
+        .cc-index .cc-question-title {
+            font-size: 13px;
+            color: #3F3F3F;
+            font-family: 'pingfangmedia';
+        }
+        
+        .cc-index .item.item-body p {
+            margin-top: 0px;
+        }
+        
+        .cc-index .cc-questioner {
+            font-size: 12px;
+            color: #9A9A9A;
+            width: 60px;
+            display: inline-block;
+        }
+        
+        .cc-index .cc-title-image {
+            /*width: calc(100% - 314px);
+            min-width: 50px;
+            max-width: 120px;*/
+            width: 89px;
+            height: 27px;
+            /*margin-left: 68px;
+            margin-right: 68px;*/
+            /*margin-left: calc(((50%-44px-30px)/4)*3);
+            margin-right: calc(((50%-44px-30px)/4)*3);
+            margin-top: 18px;*/
+            /*margin-top: 10px;*/
+        }
+        
+        .cc-index .bar.bar-footer .tabs .tab-item i {
+            margin-top: 10px;
+        }

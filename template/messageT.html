@@ -1,0 +1,47 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/message.css" rel="stylesheet">
+    <div class="cc-message" ng-controller="messageController">
+        <div class="bar bar-header">
+            <div class="tabs">
+                <a class="tab-item" href="javascript:history.back(-1)">
+                    <i class="icon icon-arror" style="float: left;margin-left: 25px;"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h1 class="">消息</h1>
+                </a>
+                <a class="tab-item" href="#">
+
+                </a>
+            </div>
+        </div>
+        <ion-content class="cc-message-grid">
+            <!--<ion-refresher pulling-text="下拉刷新..." on-refresh=""></ion-refresher>-->
+            <div class="card" ng-repeat="item in comment">
+                <div class="item item-text-wrap">
+                    <div class="row" ng-click="gotoQuestionsdetailI(item.publishid)">
+                        <div class="col col-20"><img src="{{userLogo}}"></div>
+                        <div class="col col-75" ng-hide="item.msgUserList.length==1?false:true"><span>{{item.msgUserList[0].fromuser}}</span>&nbsp;{{item.text}}</div>
+                        <div class="col col-75" ng-hide="item.msgUserList.length==2?false:true"><span>{{item.msgUserList[0].fromuser}}、{{item.msgUserList[1].fromuser}}</span>&nbsp;<br>{{item.text}}</div>
+                        <div class="col col-75" ng-hide="item.msgUserList.length>2?false:true"><span>{{item.msgUserList[0].fromuser}}、{{item.msgUserList[1].fromuser}}</span>&nbsp;等{{item.msgUserList.length}}人<br>{{item.text}}</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="card">
+                <div class="item item-text-wrap">
+                    <div class="row" ui-sref="questionsdetailI">
+                        <div class="col col-20"><img src="http://i1.piimg.com/501024/7444aac4d1865a1e.png"></div>
+                        <div class="col col-75"><span>追风少年李大戳</span>&nbsp;回复了你的回答</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div class="row" ui-sref="questionsdetailI">
+                        <div class="col col-20"><img src="http://i1.piimg.com/501024/7444aac4d1865a1e.png"></div>
+                        <div class="col col-75"><span>追风少年李大戳、阿大哈等十人</span><br>回复了你的回答</div>
+                    </div>
+                </div>
+            </div>-->
+        </ion-content>
+    </div>
+</ion-view>

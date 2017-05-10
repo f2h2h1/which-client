@@ -1,0 +1,173 @@
+        .cc-askingquestions {
+            background-color: #2B2B2B;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-askingquestions .bar.bar-header.bar-light {
+            height: 117px;
+        }
+        
+        .cc-askingquestions .tabs {
+            background-color: #2B2B2B;
+            height: 80px;
+            top: 0px;
+            padding-top: 20px;
+            /*padding-bottom: 27px;*/
+            background-size: 100% 0px;
+        }
+        
+        .cc-askingquestions .tabs .tab-item {
+            opacity: 1;
+        }
+        
+        .cc-askingquestions .tabs i {
+            color: #FCFCFC;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .cc-askingquestions .cc-title-image-user {
+            width: 45px;
+            height: 45px;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        .cc-askingquestions ion-content {
+            padding-top: 87px;
+        }
+        
+        .cc-askingquestions ion-content .scroll {
+            height: 100%;
+        }
+        
+        .cc-askingquestions ion-content .card {
+            /*width: 344px;
+            height: 524px;*/
+            width: 92%;
+            max-width: 400px;
+            /*height: 95%;*/
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 0px;
+            border-bottom-width: 7px;
+            border-bottom-color: #FDC72C;
+            border-bottom-style: solid;
+        }
+        
+        .cc-askingquestions ion-content .card .item-text-wrap {
+            height: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        
+        .cc-askingquestions label {
+            padding: 0px;
+            /*border-width: 0px;*/
+        }
+        
+        .cc-askingquestions ion-content .card input,
+        .cc-askingquestions ion-content .card textarea {
+            text-align: center;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-questiontitle {
+            padding-top: 13px;
+            padding-bottom: 10px;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        
+        .cc-askingquestions ion-content .card .item-text-wrap .item-input input {
+            padding-right: 0px;
+            font-size: 17px;
+            color: #2B2B2B;
+            padding-top: 29px;
+            padding-bottom: 29px;
+        }
+        
+        .cc-askingquestions ion-content .card .item-text-wrap textarea {
+            font-size: 13px;
+            color: #6D6D6D;
+            line-height: 18px;
+            padding-top: 19px;
+            height: calc(100%-16-58-5-345-16);
+        }
+        
+        .cc-askingquestions ion-content .card .bar-footer {
+            height: 235px;
+            padding: 0px;
+            text-align: center;
+            background-image: linear-gradient(0deg, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0) 0, rgba(0, 0, 0, 0) 0);
+            bottom: 16px;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option {
+            /*position: absolute;
+            bottom: 0px;*/
+            /*padding-bottom: 15px;*/
+            padding-left: 0px;
+            padding-right: 0px;
+            margin: 0 auto;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .col {
+            /*padding-left: 0px;
+            padding-right: 0px;*/
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-content {
+            /*width: 154px;*/
+            height: 87px;
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #DEDCDC;
+            padding: 0px;
+            margin: 0 auto;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-content input {
+            width: 92%;
+            height: 95%;
+            margin: 0 auto;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-image {
+            background-size: cover;
+            background-position: center;
+            /*width: 152px;*/
+            height: 148px;
+            /*background-image: url("http://i2.muimg.com/501024/2cc3dd8f4d81f72a.png");*/
+            color: #FFF;
+            line-height: 230px;
+            text-align: center;
+            font-size: 2.5em;
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-image.cc-option-image-a {
+            background-image: url("http://i2.muimg.com/501024/2cc3dd8f4d81f72a.png");
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-image.cc-option-image-b {
+            background-image: url("http://i2.muimg.com/501024/180dbf8f25adf0cc.png");
+        }
+        
+        .cc-askingquestions ion-content .card .cc-option .cc-option-image input {
+            /*position: absolute;
+            top: 50px;*/
+            color: #FFF;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }

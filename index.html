@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=h=device-width" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" href="http://i1.piimg.com/501024/7444aac4d1865a1e.png" />
+    <link rel="apple-touch-startup-image" href="http://i4.buimg.com/501024/90f3a02d4d41c863.png" />
+    <title>which</title>
+    <link href="static/css/ionic.css" rel="stylesheet">
+    <link href="static/css/icon.css" rel="stylesheet">
+
+    <!--<script src="static/js/bulid.js"></script>-->
+    <script src="static/js/ionic.bundle.min.js"></script>
+    <style>
+        input {
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+        
+        input,
+        input:focus,
+        input:active {
+            user-select: text;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="mainController">
+    <!-- 主 ion-nav-view -->
+    <ion-nav-view name="main"></ion-nav-view>
+
+    <script src="appData.js"></script>
+    <script src="appRoute.js"></script>
+    <script src="appController.js"></script>
+    <script src="appService.js"></script>
+    <script src="static/js/md5.js"></script>
+</body>
+
+</html>

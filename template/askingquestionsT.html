@@ -1,0 +1,42 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/askingquestions.css" rel="stylesheet">
+    <div class="cc-askingquestions" ng-controller="askingquestionsController">
+        <div class="tabs">
+            <a class="tab-item" href="javascript:history.back(-1)">
+                <i class="icon icon-arror" style="float: left;margin-left: 25px;"></i>
+            </a>
+            <a class="tab-item" href="#">
+                <img class="cc-title-image-user" src="{{userLogo}}">
+            </a>
+            <a class="tab-item" ng-click="gotoaskQuesClass(askQuestionTitle, askQuestionContent, askQuestionOptionA, askQuestionOptionB)">
+                <i class="icon icon-confirm" style="float: right;margin-right: 25px;font-size:25px;"></i>
+            </a>
+        </div>
+        <ion-content>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <label class="item item-input  cc-questiontitle">
+                                <input type="text" placeholder="输入问题标题" ng-model="askQuestionTitle" onclick="console.log(angular.element(this).scope())">
+                            </label>
+                    <label class="item item-input" style="border-width: 0px;">
+                                <textarea placeholder="输入问题描述" style="height: 200px;" ng-model="askQuestionContent" ></textarea>
+                            </label>
+                    <div class="row cc-option">
+                        <div class="col col-50">
+                            <div class="row cc-option-content"><input type="text" placeholder="输入选项A" ng-model="askQuestionOptionA"></div>
+                            <div class="row cc-option-image cc-option-image-a" id="uploadpica">
+                                <input type="file" accept="image/*" name="file" onchange="angular.element(this).scope().img_upload(this.files, 1)" id="uploadpicobja">
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                            <div class="row cc-option-content"><input type="text" placeholder="输入选项B" ng-model="askQuestionOptionB"></div>
+                            <div class="row cc-option-image cc-option-image-b" id="uploadpicb">
+                                <input type="file" accept="image/*" name="file" onchange="angular.element(this).scope().img_upload(this.files, 2)" id="uploadpicobjb">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </div>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="" animation="no-animation" class="no-animation">
+    <div class="item item-text-wrap loginregister" ng-show="loginregister" id="loginView3">
+        <div class="login-img">
+            <!--<img src="http://i4.buimg.com/501024/dc2ab3594e2cf9a2.png" />-->
+            <!--<div class="user-img">
+                        <input type="file" accept="image/*" name="file">
+                    </div>-->
+            <div class="user-img" id="uploaduserpic">
+                <input type="file" accept="image/*" name="file" onchange="angular.element(this).scope().img_upload(this.files)">
+            </div>
+        </div>
+        <label class="item item-input">
+                    <span class="input-title">昵称</span>
+                    <input type="text" ng-focus="scollbottom()" placeholder="请输入你的呢称" ng-model="registerNickName" maxlength="10">
+                </label>
+        <button class="button button-light next" ng-click="register(registerNickName)">提交注册</button>
+    </div>
+</ion-view>

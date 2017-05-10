@@ -1,0 +1,166 @@
+.cc-personal {
+    font-family: 'PingFangMedium';
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100%;
+}
+
+.cc-personal i {
+    color: #FFF;
+    width: 26px;
+}
+
+.cc-personal .bar,
+.cc-personal .tabs {
+    background-image: linear-gradient(0deg, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0) 0, rgba(0, 0, 0, 0) 0);
+}
+
+.cc-personal .tabs .tab-item {
+    opacity: 1;
+}
+
+.cc-personal .bar.bar-header {
+    border: 0px;
+    height: 54px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0px 5px 10px 1px #1B1B1B;
+}
+
+.cc-personal .bar div {
+    border: 0px;
+}
+
+.cc-personal .bar.bar-header,
+.cc-personal .tabs,
+.cc-personal .bar.bar-header .bar,
+.cc-personal .bar .bar-footer {
+    background-color: #373737;
+}
+
+.cc-personal .bar.bar-footer {
+    padding: 0px;
+}
+
+.cc-personal .tabs {
+    border: 0px;
+    padding-top: 0px;
+}
+
+.cc-personal #oval {
+    width: 200px;
+    height: 50px;
+    background: #373737;
+    border-top-left-radius: 100px 50px;
+    border-top-right-radius: 100px 50px;
+    border-bottom-right-radius: 0 0;
+    border-bottom-left-radius: 0 0;
+}
+
+.cc-personal .bar.bar-header .tabs .tab-item i {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.cc-personal .ion-arrow-left-c .ion-gear-b {
+    color: #FFF;
+}
+
+.cc-personal .bar h4 {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.cc-personal .logo {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.cc-personal .logo .logo-image {
+    width: 72px;
+    height: 72px;
+    border-radius: 45px;
+}
+
+.cc-personal .layer {
+    margin-top: 11px;
+    text-align: center;
+}
+
+.cc-personal .cc-personal-layer {
+    font-family: 'PingFangMedium';
+    color: #FCC902;
+    font-size: 12px;
+}
+
+.cc-personal .cc-personal-tabs {
+    margin-top: 15px;
+    background-color: #2D2D2D;
+    color: #A4A2A2;
+    position: inherit;
+}
+
+.cc-personal .cc-personal-tabs .a-checked {
+    color: #FFC902;
+}
+
+.cc-personal .cc-personal-grid {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+    font-family: 'PingFangRegular';
+    font-size: 14px;
+    color: #000000;
+}
+
+.cc-personal .cc-personal-grid .card {
+    margin: 0 auto;
+    width: 92%;
+    max-width: 400px;
+    /*height: 78px;*/
+    border-radius: 4px;
+    margin-bottom: 13px;
+}
+
+.cc-personal .cc-personal-grid .card .item-text-wrap {
+    margin: 0px auto;
+    /*padding-right: 10px;*/
+    padding-bottom: 6px;
+}
+
+.cc-personal .cc-personal-grid .card .item-text-wrap .row.question-title {
+    padding-bottom: 15px;
+}
+
+.cc-personal .cc-personal-grid .card .item-text-wrap .row .col {
+    font-size: 12px;
+    color: #8F8F8F;
+    padding-top: 10px;
+}
+
+.cc-personal .cc-personal-grid .card .item-text-wrap .row .col .cc-personal-del {
+    color: #545454;
+}
+
+.cc-personal .cc-personal-grid .card .item-text-wrap .row .col.col-20 span {
+    /* padding: 0px;
+            width: 69px;*/
+    float: right;
+}
+
+.cc-personal ion-nav-view {
+    height: 230%;
+}
+
+.cc-personal ion-nav-view ion-view {
+    background-color: #2D2D2D;
+}
+
+#myquestions {
+    margin-right: 3.5%;
+}
+
+#mychecked {
+    margin-left: 3.5%;
+}

@@ -1,0 +1,17 @@
+<ion-view view-title="" animation="no-animation" class="no-animation">
+    <div class="item item-text-wrap login" ng-show="login" id="loginView1">
+        <div class="login-img">
+            <img src="http://i4.buimg.com/501024/525b9ee8338c9ca2.png" />
+        </div>
+        <label class="item item-input">
+                    <span class="input-title"><i class="icon icon-register－account"></i></span>
+                    <input type="text" ng-focus="scollbottom()" placeholder="手机号" ng-model="loginPhone">
+                </label>
+        <label class="item item-input">
+                    <span class="input-title"><i class="icon icon-register－key"></i></span>
+                    <input type="password" ng-focus="scollbottom()" placeholder="密码" ng-model="loginPwd">
+                </label>
+        <button class="button button-light next" ng-click="login(loginPhone, loginPwd)">登录</button>
+        <div class="login-register"><span nav-direction="exit" ui-sref="loginMainI.loginNextI">注册新账号-></span></div>
+    </div>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/search.css" rel="stylesheet">
+    <div class="cc-search" ng-controller="searchController">
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                        <i class="icon ion-ios-search placeholder-icon"></i>
+                        <input type="search" placeholder="输入关键词" ng-keyup="searchKeyup($event)" ng-model="searchText">
+                    </label>
+            <button class="button button-clear" ng-click="goBack()">取消</button>
+        </div>
+
+        <div class="list">
+            <a class="item item-icon-left item-icon-right" ng-click="gotoQuestins(item.publishid, item.type)" ng-repeat="item in searchResult">
+                <span>{{item.tittle}}</span>
+                <span class="item-note">{{item.likes}}</span>
+                <i class="icon ion-ios-heart-outline"></i>
+            </a>
+            <!--<a class="item item-icon-left item-icon-right" href="#">
+                <span>出国还是工作？我好纠结呀</span>
+                <span class="item-note">45</span>
+                <i class="icon ion-ios-heart-outline"></i>
+            </a>
+
+            <a class="item item-icon-left item-icon-right" href="#">
+                <span>最近想出国旅游，哪里比较合适？</span>
+                <span class="item-note">45</span>
+                <i class="icon ion-ios-heart-outline"></i>
+            </a>
+
+            <a class="item item-icon-left item-icon-right" href="#">
+                <span>出国旅游遇到不文明现象，管不管？</span>
+                <span class="item-note">45</span>
+                <i class="icon ion-ios-heart-outline"></i>
+            </a>-->
+
+        </div>
+    </div>
+</ion-view>

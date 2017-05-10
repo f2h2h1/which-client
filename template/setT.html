@@ -1,0 +1,55 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/set.css" rel="stylesheet">
+    <div class="cc-set" ng-controller="setController">
+        <div class="bar bar-header">
+            <div class="tabs">
+
+                <a class="tab-item" href="javascript:history.back(-1)">
+                    <i class="icon icon-arror" style="float: left;margin-left: 25px;"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h4>
+                        设置
+                    </h4>
+                </a>
+                <a class="tab-item" href="#">
+                    <!--<i class="icon ion-gear-b" style="float: right;margin-right: 25px;"></i>-->
+                </a>
+            </div>
+
+        </div>
+        <ion-content style="padding-top:54px;">
+            <div class="cc-set-content content has-header">
+                <div class="list">
+                    <a class="item item-icon-right" href="#">
+                      账号设置
+                      <i class="icon icon-back·"></i>
+                    </a>
+
+                    <a class="item item-icon-right" href="#">
+                      修改密码
+                      <i class="icon icon-back·"></i>
+                    </a>
+
+                    <a class="item item-icon-right" href="#">
+                      意见反馈
+                      <i class="icon icon-back·"></i>
+                    </a>
+
+                    <a class="item item-icon-right" href="#">
+                      清除缓存
+                      <i class="icon icon-back·"></i>
+                    </a>
+
+                    <a class="item item-icon-right" href="#">
+                      关于我们
+                      <i class="icon icon-back·"></i>
+                    </a>
+
+                </div>
+                <a class="item cc-set-exit" ng-click="outLogin()">
+                    退出登录
+                </a>
+            </div>
+        </ion-content>
+</ion-view>

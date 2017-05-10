@@ -1,0 +1,70 @@
+<ion-view view-title="which" cache-view="false">
+    <link href="static/css/tpl/askingquestionsclass.css" rel="stylesheet">
+    <div class="cc-askingquestionsclass" ng-controller="askingquestionsclassController">
+        <div class="bar bar-header cc-askingquestionsclass-header">
+            <div class="tabs cc-askingquestionsclass-tabs">
+                <a class="tab-item" href="javascript:history.back(-1)">
+                    <i class="icon icon-arror cc-askingquestionsclass-button"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h1 class="cc-askingquestionsclass-title" ng-class="choosetitle">{{choseQuestionClassText}}</h1>
+                </a>
+                <a class="tab-item" ng-click="gotosuedsuccessfully()">
+                    <i class="icon icon-confirm cc-askingquestionsclass-button" style="font-size:25px;"></i>
+                </a>
+            </div>
+        </div>
+        <ion-content class="cc-askingquestionsclass-grid">
+            <div style="max-width: 400px; margin: 0 auto;">
+                <div class="row" ng-repeat="item in type">
+                    <div class="col col-50" ng-if="item[0]==null?false:true">
+                        <div class="col-demo" ng-click="choseQuestionClass(item[0].number, item[0].text)">
+                            <img src="{{item[0].url}}">
+                        </div>
+                    </div>
+                    <div class="col col-50" ng-if="item[1]==null?false:true">
+                        <div class="col-demo" ng-click="choseQuestionClass(item[1].number, item[1].text)">
+                            <img src="{{item[1].url}}">
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(1)">
+                            <img src="http://i4.buimg.com/501024/7c131943fef4be23.png">
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(3)">
+                            <img src="http://i4.buimg.com/501024/6ca2ce6eaa49e734.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(2)">
+                            <img src="http://i4.buimg.com/501024/7f28045cbc6f5826.png">
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(4)">
+                            <img src="http://i4.buimg.com/501024/57fd29ac15692dcc.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(5)">
+                            <img src="http://i4.buimg.com/501024/995ea71538a7c641.png">
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="col-demo" ng-click="choseQuestionClass(6)">
+                            <img src="http://i4.buimg.com/501024/afbb03214d0fff9f.png">
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+    </div>
+    </ion-content>
+</ion-view>

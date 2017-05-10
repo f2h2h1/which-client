@@ -1,0 +1,17 @@
+<ion-view view-title="" animation="no-animation" class="no-animation">
+    <div class="item item-text-wrap loginnext" ng-show="loginnext" id="loginView2">
+        <label class="item item-input">
+                    <span class="input-title">手机号</span>
+                    <input type="text" ng-focus="scollbottom()" placeholder="请输入手机号码" ng-model="registerPhone">
+                </label>
+        <label class="item item-input">
+                    <span class="input-title">密码</span>
+                    <input type="text" ng-focus="scollbottom()" placeholder="6-20位数字和字母任意组合" ng-model="registerPawa">
+                </label>
+        <label class="item item-input">
+                    <span class="input-title">确认密码</span>
+                    <input type="text" ng-focus="scollbottom()" placeholder="再输一遍密码" ng-model="registerPawb">
+                </label>
+        <button class="button button-light next" ng-click="loginNext(registerPhone, registerPawa, registerPawb)">下一步</button>
+    </div>
+</ion-view>

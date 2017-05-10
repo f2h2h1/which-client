@@ -1,0 +1,113 @@
+<ion-view view-title="which" cache-view="false">
+    <link href="static/css/tpl/questions.css" rel="stylesheet">
+    <div class="cc-questions" ng-controller="questionsController" style="background: url({{backgroundImage}}) no-repeat center bottom;background-size: 100% 100%;">
+        <div class="bar bar-header " id="questionsheader">
+            <div class="tabs">
+                <a class="tab-item" href="javascript:history.back(-1)">
+                    <i class="icon icon-arror cc-questions-button" style="float: left;margin-left: 25px;margin-top:15px;font-size:20px;"></i>
+                </a>
+                <a class="tab-item" href="#">
+                    <h1>{{type}}</h1>
+                </a>
+                <a class="tab-item" ui-sref="askingquestionsI">
+                    <i class="icon ion-ios-plus-empty cc-questions-button" style="float: right;margin-right: 25px;font-size: 40px;"></i>
+                </a>
+            </div>
+        </div>
+        <ion-content scroll="true" on-scroll="getScrollPosition()" id="questioncontent">
+            <ion-slide-box class="cc-slide-box" active-slide="myActiveSlide" show-pager="false" on-slide-changed="sltest($index)">
+                <ion-slide ng-repeat="item in indexContent">
+                    <div class="box">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row"><img src="{{item.logo}}"></div>
+                                    <div class="row"><span>{{item.nickname}}</span></div>
+                                </div>
+                            </div>
+                            <div class="row question-content" ng-click="gotoQuestionsdetailI(item.publishid)"><span>{{item.tittle}}</span></div>
+                            <div class="row question-option">
+                                <div class="col" style="padding:0px;">
+                                    <div class="row time-like">
+                                        <div class="col col-50 option-time"><span class="">{{item.createtime}}</span></div>
+                                        <div class="col col-50">
+                                            <div class="option-like">
+                                                <i class="icon ion-ios-chatbubble-outline"></i>&nbsp;<span>{{item.comments}}</span>&nbsp;&nbsp;
+                                                <i class="icon ion-ios-heart-outline"></i>&nbsp;<span>{{item.likes}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding: 0;">
+                                        <div class="col col-50 option-img-c">
+                                            <div class="row option-img-r">
+                                                <div class="option-img option-A chosen" ng-hide="item.choose.state==1?false:true" style="background: url({{item.imageA}}) no-repeat center bottom;background-size: 100% 100%;">
+                                                    <div class="back-opacity"></div><span>{{item.choose.optionA-1}}人</br>和您选择一样</span>
+                                                </div>
+                                                <div class="option-img option-A chosend" ng-hide="item.choose.state==2?false:true" style="background: url({{item.imageA}}) no-repeat center bottom;background-size: 100% 100%;">
+                                                    <div class="back-opacity"></div><span>{{item.choose.optionA}}人</br>和您选择不同</span>
+                                                </div>
+                                                <div class="option-img option-A" ng-hide="item.choose.state==0?false:true" style="background: url({{item.imageA}}) no-repeat center bottom;background-size: 100% 100%;" onclick="angular.element(this).scope().chose(this, 1)" publishid="{{item.publishid}}"
+                                                    authorid="{{item.authorid}}" id="{{item.publishid+item.authorid+'a'}}" ischoose="0">
+                                                    <!--<div class="back-opacity"></div><span>{{iten.choose.optionA}}人</br>和您选择一样</span>-->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="option">{{item.optionA}}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-50 option-img-c">
+                                            <div class="row option-img-r">
+                                                <div class="option-img option-B chosen" ng-hide="item.choose.state==2?false:true" style="background: url({{item.imageB}}) no-repeat center bottom;background-size: 100% 100%;">
+                                                    <div class="back-opacity"></div><span>{{item.choose.optionB-1}}人</br>和您选择一样</span>
+                                                </div>
+                                                <div class="option-img option-B chosend" ng-hide="item.choose.state==1?false:true" style="background: url({{item.imageB}}) no-repeat center bottom;background-size: 100% 100%;">
+                                                    <div class="back-opacity"></div><span>{{item.choose.optionB}}人</br>和您选择不同</span>
+                                                </div>
+                                                <div class="option-img option-B" ng-hide="item.choose.state==0?false:true" style="background: url({{item.imageB}}) no-repeat center bottom;background-size: 100% 100%;" onclick="angular.element(this).scope().chose(this, 2)" publishid="{{item.publishid}}"
+                                                    authorid="{{item.authorid}}" id="{{item.publishid+item.authorid+'b'}}" ischoose="0">
+                                                    <!--<div class="back-opacity"></div><span>3人</br>和您选择不同</span>-->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="option">{{item.optionB}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </ion-content>
+        <div class="bar bar-footer bar-dark">
+            <!--<div class="row" ng-show="share">
+                <div class="col col-33">
+                    <i class="icon ion-ios-heart-outline" ng-show="outlinelike" ng-click="like()"></i>
+                    <i class="icon ion-ios-heart" ng-show="inlinelike" ng-click="like()"></i>
+                </div>
+                <div class="col col-33"><i class="icon ion-chatbox-working" ng-click="onreply()"></i></div>
+                <div class="col col-33"><i class="icon ion-android-share-alt"></i></div>
+            </div>-->
+            <div class="row" ng-show="share">
+                <div class="col col-50">
+                    <i class="icon ion-ios-heart-outline" ng-show="outlinelike" ng-click="like()"></i>
+                    <i class="icon ion-ios-heart" ng-show="inlinelike" ng-click="like()"></i>
+                </div>
+                <div class="col col-50"><i class="icon ion-chatbox-working" ng-click="onreply()"></i></div>
+            </div>
+            <div class="row" ng-show="ngreply">
+                <div class="col col-80">
+                    <label class="item item-input">
+                                <!--<input type="search" placeholder="评论" ng-model="replytext" onchange="angular.element(document.querySelector('[ng-controller=questionsController]')).scope().onreplychange()">-->
+                                <input type="search" placeholder="评论" ng-model="replytext" id="questionreplyid">
+                            </label>
+                </div>
+                <div class="col col-20">
+                    <button class="button" ng-click="sendreply()">{{sendbuttontext}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

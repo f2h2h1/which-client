@@ -1,0 +1,49 @@
+<ion-view view-title="which">
+    <link href="static/css/tpl/indexClass.css" rel="stylesheet">
+    <div class="cc-classification">
+        <ion-content scroll=false>
+            <ion-slide-box class="cc-slide-box" active-slide="myActiveSlide" show-pager="false">
+                <ion-slide>
+                    <div class="box blue">
+                        <img width="293" src="http://i4.buimg.com/501024/0b6002fffc5da56f.png" ng-click="gotoQuestins(0,-1)">
+                    </div>
+                </ion-slide>
+                <ion-slide ng-repeat="item in type">
+                    <div class="box blue">
+                        <img width="293" src="{{item.url}}" ng-click="gotoQuestins(0,item.number)">
+                    </div>
+                </ion-slide>
+                <!--<ion-slide>
+                    <div class="box blue">
+                        <img width="293" src="http://i4.buimg.com/501024/7c131943fef4be23.png" ng-click="gotoQuestins(0,1)">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box yellow">
+                        <img width="293" src="http://i4.buimg.com/501024/6ca2ce6eaa49e734.png" ng-click="gotoQuestins(0,3)">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img width="293" src="http://i4.buimg.com/501024/7f28045cbc6f5826.png" ng-click="gotoQuestins(0,2)">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img width="293" src="http://i4.buimg.com/501024/57fd29ac15692dcc.png" ng-click="gotoQuestins(0,4)">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img width="293" src="http://i4.buimg.com/501024/995ea71538a7c641.png" ng-click="gotoQuestins(0,5)">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img width="293" src="http://i4.buimg.com/501024/afbb03214d0fff9f.png" ng-click="gotoQuestins(0,6)">
+                    </div>
+                </ion-slide>-->
+            </ion-slide-box>
+        </ion-content>
+    </div>
+</ion-view>

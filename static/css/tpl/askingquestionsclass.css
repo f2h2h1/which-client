@@ -1,0 +1,68 @@
+        .cc-askingquestionsclass {
+            background-color: #2A2A2A;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-askingquestionsclass-header {
+            /*height: 117px;*/
+            border-bottom-width: 0px;
+            padding: 0px;
+        }
+        
+        .cc-askingquestionsclass-tabs {
+            height: 100px;
+            top: 0px;
+            padding-top: 20px;
+            /*padding-bottom: 27px;*/
+            background-size: 100% 0px;
+            background-color: #2A2A2A;
+            border-top-width: 0px;
+        }
+        
+        .cc-askingquestionsclass-tabs .tab-item {
+            opacity: 1;
+        }
+        
+        .cc-title-image-user {
+            width: 45px;
+            height: 45px;
+            border-radius: 30px;
+        }
+        
+        h1.cc-askingquestionsclass-title {
+            font-size: 17px;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+        
+        .cc-askingquestionsclass-tabs .tab-item .cc-askingquestionsclass-button {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .cc-askingquestionsclass-grid {
+            margin: 0 auto;
+            margin-top: 90px;
+            padding: 0;
+            width: 89%;
+        }
+        
+        .cc-askingquestionsclass-grid .row .col.col50 {
+            width: 100%;
+        }
+        
+        .cc-askingquestionsclass-grid .row .col-demo {
+            text-align: center;
+        }
+        
+        .cc-askingquestionsclass-grid .row img {
+            width: 132px;
+            height: 164px;
+            margin: 0 auto;
+        }
+        
+        .cc-askingquestionsclass .choosetitle {
+            color: #FFC902;
+        }

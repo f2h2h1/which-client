@@ -1,0 +1,39 @@
+        .cc-issuedsuccessfully {
+            background-color: #333333;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cc-issuedsuccessfully .bar-header {
+            background-image: linear-gradient(0deg, rgba(221, 221, 221, 0), rgba(221, 221, 221, 0) 50%, transparent 50%);
+            border-bottom: 0px;
+            background-color: #333333;
+        }
+        
+        .cc-issuedsuccessfully .bar-light .title {
+            text-align: right;
+            color: #DCB00C;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+        
+        .cc-issuedsuccessfully h1 {
+            text-align: center;
+            padding-top: 168px;
+            color: #767676;
+            font-size: 23px;
+            font-weight: bold;
+        }
+        
+        .cc-issuedsuccessfully .row {
+            padding-top: 100px;
+        }
+        
+        .cc-issuedsuccessfully .row .col {
+            text-align: center;
+        }
+        
+        .cc-issuedsuccessfully .row .col img {
+            width: 50%;
+            margin: 0 auto;
+        }
