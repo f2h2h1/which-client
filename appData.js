@@ -1,6 +1,6 @@
 var appData = {
     postUrl: "http://tp.hscxsh.cn/which",
-    tietukuToken: "20b611a62a4357df384140459a8aa84b47afac46:Y6UM3CluyXDxTftcwaj3K3XK5-0=:eyJkZWFkbGluZSI6MTQ3MDQxNDM2NSwiYWN0aW9uIjoiZ2V0IiwidWlkIjoiNTAxMDI0IiwiYWlkIjoiMTIyOTk1MyIsImZyb20iOiJmaWxlIn0=", // 贴图库的token
+    tietukuToken: "", // 贴图库的token
     user: {
         phone: null,
         nickName: null,
